@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hassanharunani7.github.io/Hassan-Harunani10/sitemap.xml
+Sitemap: https://hassanharunani7.github.io/sitemap.xml

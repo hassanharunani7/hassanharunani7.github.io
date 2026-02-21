@@ -2633,6 +2633,15 @@ body.dark-mode .section-title::after {
     background: #38bdf8;
 }
 
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(to right, #2563eb, #f97316);
+    width: 0%;
+    z-index: 9999;
+}
 
 
 

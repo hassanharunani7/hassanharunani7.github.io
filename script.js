@@ -1091,6 +1091,10 @@ if (document.body.classList.contains("dark-mode")) {
 
 // Scroll Progress Bar
 window.addEventListener("scroll", function () {
+    const heroImg = document.querySelector(".hero img");
+    let offset = window.pageYOffset;
+    heroImg.style.transform = "translateY(" + offset * 0.2 + "px)";
+});
     const scrollTop = document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     const progress = (scrollTop / scrollHeight) * 100;
@@ -1099,5 +1103,20 @@ window.addEventListener("scroll", function () {
 });
 
 
+const toggle = document.getElementById("dark-toggle");
+
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+}
+
+toggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark-mode");
+
+    if (document.body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+    } else {
+        localStorage.setItem("theme", "light");
+    }
+});
 
 

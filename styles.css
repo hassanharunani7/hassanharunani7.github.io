@@ -206,11 +206,14 @@ body {
 /* ==========================================
    HERO SECTION (FINAL CLEAN VERSION)
    ========================================== */
-
 .hero {
-	padding-top: 20px;
-    position: relative;
-    overflow: hidden;
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+	position: relative;
+    padding: 120px 20px 60px;
     background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #f97316);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite;
@@ -220,23 +223,21 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-	#particles-js {
-    inset: 0;
-    z-index: 0;
-		
+#particles-js {
+    position: absolute;
+    height: 100%;
 }
 
 .hero-content {
     position: relative;
     z-index: 1;
-}
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 50px;
 
-    min-height: 100vh;
+    min-height: 75vh;
     padding: 80px 10%;
 
     background: linear-gradient(
@@ -2685,6 +2686,7 @@ body.dark-mode .section-title::after {
 .image-card:hover img {
     transform: rotateY(5deg) rotateX(5deg) scale(1.05);
 }
+
 
 
 

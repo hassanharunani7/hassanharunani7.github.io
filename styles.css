@@ -1,6 +1,10 @@
 body {
     transition: background 0.4s ease, color 0.4s ease;
 }
+
+* {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
 /* ============================================
    HASSAN HARUNANI PORTFOLIO - STYLES
    ============================================ */
@@ -2636,8 +2640,9 @@ h2.section-title {
    ========================================== */
 
 body.dark-mode {
-    background: #0f172a;
+    background-color: #0f172a;
     color: #e2e8f0;
+	transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 body.dark-mode .navbar {
@@ -2711,6 +2716,7 @@ body.dark-mode .section-title::after {
     }
 
 }
+
 
 
 

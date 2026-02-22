@@ -326,9 +326,6 @@ body {
     margin-bottom: 30px;
     color: white;
 }
-.hero h1 {
-    font-size: 3.5rem;
-}
 
 
 /* ==========================================
@@ -2684,6 +2681,7 @@ body.dark-mode .section-title::after {
 .image-card:hover img {
     transform: rotateY(5deg) rotateX(5deg) scale(1.05);
 }
+
 
 
 

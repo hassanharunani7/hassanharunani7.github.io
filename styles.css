@@ -287,9 +287,9 @@ body {
     border-radius: 20px;
 }
 
-@media (max-width: 768px) {
-	.hero {
-    padding-top: 120px;
+@media (max-width: 768px) 
+.hero {
+    padding-top: 140px !important;
 }
     .hero-container {
         flex-direction: column;
@@ -2686,6 +2686,7 @@ body.dark-mode .section-title::after {
 .image-card:hover img {
     transform: rotateY(5deg) rotateX(5deg) scale(1.05);
 }
+
 
 
 

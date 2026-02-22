@@ -318,10 +318,6 @@ body {
     font-weight: 700;
     margin-bottom: 20px;
     color: white;
-    background: linear-gradient(90deg, #ffffff, #f97316);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
 }
 
 .hero .subtitle {
@@ -2726,6 +2722,7 @@ body.dark-mode .section-title::after {
     }
 
 }
+
 
 
 

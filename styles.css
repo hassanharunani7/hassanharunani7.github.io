@@ -326,7 +326,10 @@ body {
     margin-bottom: 30px;
     color: white;
 }
-
+.hero h1 {
+    font-size: 3rem;
+	 color: white;
+}
 
 /* ==========================================
    HERO BUTTONS
@@ -2681,6 +2684,7 @@ body.dark-mode .section-title::after {
 .image-card:hover img {
     transform: rotateY(5deg) rotateX(5deg) scale(1.05);
 }
+
 
 
 

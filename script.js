@@ -1089,18 +1089,7 @@ if (document.body.classList.contains("dark-mode")) {
 }
 
 
-// Scroll Progress Bar
-window.addEventListener("scroll", function () {
-    const heroImg = document.querySelector(".hero img");
-    let offset = window.pageYOffset;
-    heroImg.style.transform = "translateY(" + offset * 0.2 + "px)";
-});
-    const scrollTop = document.documentElement.scrollTop;
-    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const progress = (scrollTop / scrollHeight) * 100;
 
-    document.getElementById("progress-bar").style.width = progress + "%";
-});
 
 
 

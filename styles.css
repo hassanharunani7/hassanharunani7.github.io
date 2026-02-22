@@ -2725,6 +2725,29 @@ body.dark-mode .section-title::after {
 
 
 
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+nav a.active {
+    background: linear-gradient(90deg, #3b82f6, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f97316;
+}
 
 
 

@@ -208,11 +208,19 @@ body {
    ========================================== */
 
 .hero {
-	position: relative;
-    overflow: hidden;
 	padding-top: 100px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #0f172a, #1e3a8a, #2563eb, #f97316);
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
 	#particles-js {
-    position: absolute;
     inset: 0;
     z-index: 0;
 		
@@ -343,12 +351,33 @@ body {
 
 /* Orange filled button */
 .btn-primary {
-    background-color: #ff6b3d;
+    position: relative;
+    overflow: hidden;
+    background: #f97316;
     color: white;
+    border-radius: 30px;
+    padding: 12px 28px;
+    border: none;
 }
 
-.btn-primary:hover {
-    background-color: #e85a2e;
+.btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.4),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.btn-primary:hover::before {
+    left: 100%;
 }
 
 /* White outline button */
@@ -2656,6 +2685,7 @@ body.dark-mode .section-title::after {
 .image-card:hover img {
     transform: rotateY(5deg) rotateX(5deg) scale(1.05);
 }
+
 
 
 

@@ -491,6 +491,12 @@ section {
     border-top: 4px solid var(--primary-color);
 }
 
+.card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+}
+
 .card,
 .stat-card {
     transition: 0.3s ease;
@@ -2716,6 +2722,7 @@ body.dark-mode .section-title::after {
     }
 
 }
+
 
 
 

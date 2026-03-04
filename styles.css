@@ -568,17 +568,6 @@ body.dark-mode .stat-card, {
     color: #f1f1f1;
 }
 
-body.dark-mode .subject-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
-
-
-
-body.dark-mode .info-card {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
 
 .language-item {
     margin-bottom: 20px;
@@ -772,6 +761,11 @@ body.dark-mode .achievement-card, {
     line-height: 1.8;
 }
 
+body.dark-mode .swim-content, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 .achievement-list {
     list-style: none;
     margin-top: 15px;
@@ -805,6 +799,11 @@ body.dark-mode .achievement-card, {
     color: var(--primary-color);
     margin-bottom: 40px;
     font-size: 1.8rem;
+}
+
+body.dark-mode .swimming-stats, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 .training-info {
@@ -952,6 +951,11 @@ body.dark-mode .training-card, {
 
 .personal-bests-table tbody tr:last-child td {
     border-bottom: none;
+}
+
+body.dark-mode .personal-bests-table, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 .event-name {
@@ -1254,6 +1258,11 @@ body.dark-mode .pb-stat-card, {
     line-height: 1.6;
 }
 
+body.dark-mode .edu-timeline-content, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 .milestone {
     color: var(--accent-color);
     font-weight: 600;
@@ -1311,6 +1320,11 @@ body.dark-mode .pb-stat-card, {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
+}
+
+body.dark-mode .subjects-grid, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 .subject-card {
@@ -1440,6 +1454,11 @@ body.dark-mode .school-card, {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
     margin-bottom: 80px;
+}
+
+body.dark-mode .interests-grid, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 .interest-card {
@@ -1603,6 +1622,10 @@ body.dark-mode .interest-card, {
     }
 }
 
+body.dark-mode .image-grid, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
 
 /* ============================================
    CONTACT SECTION
@@ -2819,6 +2842,7 @@ nav a.active::after {
     height: 2px;
     background: #f97316;
 }
+
 
 
 

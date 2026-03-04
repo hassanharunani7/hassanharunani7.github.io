@@ -558,6 +558,31 @@ section {
     color: var(--primary-color);
 }
 
+body.dark-mode .card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .stat-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .subject-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .achievement-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .info-card {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 .language-item {
     margin-bottom: 20px;
 }
@@ -2748,6 +2773,7 @@ nav a.active::after {
     height: 2px;
     background: #f97316;
 }
+
 
 
 

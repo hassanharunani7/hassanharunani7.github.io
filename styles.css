@@ -573,10 +573,7 @@ body.dark-mode .subject-card, {
     color: #f1f1f1;
 }
 
-body.dark-mode .achievement-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
+
 
 body.dark-mode .info-card {
     background: #1e1e1e;
@@ -654,6 +651,11 @@ body.dark-mode .info-card {
 .achievement-card p {
     color: var(--text-muted);
     line-height: 1.8;
+}
+
+body.dark-mode .achievement-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 
@@ -852,6 +854,11 @@ body.dark-mode .info-card {
     color: var(--accent-color);
 }
 
+body.dark-mode .training-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 .highlight-text {
     background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 212, 255, 0.1));
     padding: 15px;
@@ -1012,6 +1019,11 @@ body.dark-mode .info-card {
 .pb-stat-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
+}
+
+body.dark-mode .pb-stat-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 /* Responsive Table */
@@ -1369,6 +1381,11 @@ body.dark-mode .info-card {
     font-weight: 700;
 }
 
+body.dark-mode .subject-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 .level {
     font-size: 0.9rem;
     opacity: 0.8;
@@ -1403,6 +1420,11 @@ body.dark-mode .info-card {
 .school-card p {
     color: var(--text-muted);
     line-height: 1.8;
+}
+
+body.dark-mode .school-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 /* ============================================
@@ -1440,6 +1462,11 @@ body.dark-mode .info-card {
 .interest-card:hover {
     transform: translateY(-10px);
     box-shadow: var(--shadow-lg);
+}
+
+body.dark-mode .interest-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 .card-icon {
@@ -1636,6 +1663,11 @@ body.dark-mode .info-card {
 
 .contact-card a:hover {
     text-decoration: underline;
+}
+
+body.dark-mode .contact-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
 }
 
 /* Contact Form */
@@ -1984,6 +2016,10 @@ body.dark-mode .info-card {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
+body.dark-mode .subject-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
 /* Modal Styles */
 .modal {
     display: none;
@@ -2459,6 +2495,11 @@ h2.section-title {
     transform: translateY(-5px);
 }
 
+body.dark-mode .project-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 
 /* ==========================================
    HERO FADE-IN ANIMATION
@@ -2619,6 +2660,11 @@ h2.section-title {
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
+body.dark-mode .image-card, {
+    background: #1e1e1e;
+    color: #f1f1f1;
+}
+
 
 @media (max-width: 768px) {
     section {
@@ -2773,6 +2819,7 @@ nav a.active::after {
     height: 2px;
     background: #f97316;
 }
+
 
 
 

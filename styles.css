@@ -558,17 +558,6 @@ section {
     color: var(--primary-color);
 }
 
-body.dark-mode .card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
-
-body.dark-mode .stat-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
-
-
 .language-item {
     margin-bottom: 20px;
 }
@@ -642,10 +631,7 @@ body.dark-mode .stat-card, {
     line-height: 1.8;
 }
 
-body.dark-mode .achievement-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
+
 
 
 /* ============================================
@@ -761,10 +747,7 @@ body.dark-mode .achievement-card, {
     line-height: 1.8;
 }
 
-body.dark-mode .swim-content, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
+
 
 .achievement-list {
     list-style: none;
@@ -799,11 +782,6 @@ body.dark-mode .swim-content, {
     color: var(--primary-color);
     margin-bottom: 40px;
     font-size: 1.8rem;
-}
-
-body.dark-mode .swimming-stats, {
-    background: #1e1e1e;
-    color: #f1f1f1;
 }
 
 .training-info {
@@ -853,10 +831,6 @@ body.dark-mode .swimming-stats, {
     color: var(--accent-color);
 }
 
-body.dark-mode .training-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
 
 .highlight-text {
     background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(0, 212, 255, 0.1));
@@ -953,10 +927,6 @@ body.dark-mode .training-card, {
     border-bottom: none;
 }
 
-body.dark-mode .personal-bests-table, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
 
 .event-name {
     font-weight: 700;
@@ -1023,11 +993,6 @@ body.dark-mode .personal-bests-table, {
 .pb-stat-card p {
     color: var(--text-muted);
     font-size: 0.95rem;
-}
-
-body.dark-mode .pb-stat-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
 }
 
 /* Responsive Table */
@@ -1258,11 +1223,6 @@ body.dark-mode .pb-stat-card, {
     line-height: 1.6;
 }
 
-body.dark-mode .edu-timeline-content, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
-
 .milestone {
     color: var(--accent-color);
     font-weight: 600;
@@ -1320,11 +1280,6 @@ body.dark-mode .edu-timeline-content, {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
-}
-
-body.dark-mode .subjects-grid, {
-    background: #1e1e1e;
-    color: #f1f1f1;
 }
 
 .subject-card {
@@ -1395,10 +1350,6 @@ body.dark-mode .subjects-grid, {
     font-weight: 700;
 }
 
-body.dark-mode .subject-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
 
 .level {
     font-size: 0.9rem;
@@ -1436,10 +1387,6 @@ body.dark-mode .subject-card, {
     line-height: 1.8;
 }
 
-body.dark-mode .school-card, {
-    background: #1e1e1e;
-    color: #f1f1f1;
-}
 
 /* ============================================
    INTERESTS SECTION
@@ -1456,7 +1403,7 @@ body.dark-mode .school-card, {
     margin-bottom: 80px;
 }
 
-body.dark-mode .interests-grid, {
+ .interests-grid, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -1483,7 +1430,7 @@ body.dark-mode .interests-grid, {
     box-shadow: var(--shadow-lg);
 }
 
-body.dark-mode .interest-card, {
+ .interest-card, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -1622,7 +1569,7 @@ body.dark-mode .interest-card, {
     }
 }
 
-body.dark-mode .image-grid, {
+ .image-grid, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -1688,7 +1635,7 @@ body.dark-mode .image-grid, {
     text-decoration: underline;
 }
 
-body.dark-mode .contact-card, {
+ .contact-card, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -2039,7 +1986,7 @@ body.dark-mode .contact-card, {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode .subject-card, {
+ .subject-card, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -2518,7 +2465,7 @@ h2.section-title {
     transform: translateY(-5px);
 }
 
-body.dark-mode .project-card, {
+ .project-card, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -2683,7 +2630,7 @@ body.dark-mode .project-card, {
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
-body.dark-mode .image-card, {
+ .image-card, {
     background: #1e1e1e;
     color: #f1f1f1;
 }
@@ -2739,31 +2686,31 @@ body.dark-mode .image-card, {
    DARK MODE STYLES
    ========================================== */
 
-body.dark-mode {
+ {
     background-color: #0f172a;
     color: #e2e8f0;
 	transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-body.dark-mode .navbar {
+ .navbar {
     background: #1e293b;
 }
 
-body.dark-mode section {
+ section {
     background: transparent;
 }
 
-body.dark-mode .card,
-body.dark-mode .stat-card {
+ .card,
+ .stat-card {
     background: #1e293b;
     color: white;
 }
 
-body.dark-mode .footer {
+ .footer {
     background: #020617;
 }
 
-body.dark-mode .section-title::after {
+ .section-title::after {
     background: #38bdf8;
 }
 
@@ -2842,6 +2789,7 @@ nav a.active::after {
     height: 2px;
     background: #f97316;
 }
+
 
 
 

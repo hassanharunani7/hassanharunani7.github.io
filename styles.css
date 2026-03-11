@@ -2779,6 +2779,13 @@ nav a.active::after {
   background:#0d8ae6;
 }
 
+mark {
+  background: yellow;
+  color: black;
+  padding: 2px;
+  border-radius: 3px;
+}
+
 
 
 

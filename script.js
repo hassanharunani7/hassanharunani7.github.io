@@ -1112,29 +1112,40 @@ window.addEventListener("scroll", () => {
     });
 });
 
-let matches = [];
+let results = [];
 let currentIndex = -1;
 
-function findText() {
-  let word = document.getElementById("searchInput").value;
-  matches = [];
+function searchText(){
+  let text = document.getElementById("searchInput").value.toLowerCase();
+  results = [];
   currentIndex = -1;
 
-  let elements = document.body.innerText;
-  
-  if (window.find) {
-    window.find(word);
+  let elements = document.querySelectorAll("p, h1, h2, h3, li, span");
+
+  elements.forEach(el => {
+    if(el.innerText.toLowerCase().includes(text)){
+      results.push(el);
+    }
+  });
+
+  if(results.length > 0){
+    currentIndex = 0;
+    results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
   }
 }
 
-function findNext() {
-  let word = document.getElementById("searchInput").value;
-  window.find(word);
+function nextMatch(){
+  if(results.length === 0) return;
+
+  currentIndex = (currentIndex + 1) % results.length;
+  results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
 }
 
-function findPrev() {
-  let word = document.getElementById("searchInput").value;
-  window.find(word, false, true);
+function prevMatch(){
+  if(results.length === 0) return;
+
+  currentIndex = (currentIndex - 1 + results.length) % results.length;
+  results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
 }
 
 

@@ -1148,6 +1148,29 @@ input.addEventListener("keypress", function(e){
     }
 });
 
+const message = document.getElementById("searchMessage");
+
+findBtn.addEventListener("click", () => {
+
+    const word = input.value.trim();
+
+    if(!word){
+        message.textContent = "Type a word to search.";
+        message.className = "not-found";
+        return;
+    }
+
+    const found = window.find(word);
+
+    if(found){
+        message.textContent = "Match found.";
+        message.className = "found";
+    } else {
+        message.textContent = "Not found.";
+        message.className = "not-found";
+    }
+
+});
 
 
 

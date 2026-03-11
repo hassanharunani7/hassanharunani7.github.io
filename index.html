@@ -59,11 +59,12 @@
             </div>
         </div>
 		<button id="theme-toggle" class="theme-toggle">Dark Mode🌙</button>
-		<div class="find-box">
-  <input type="text" id="searchInput" placeholder="Find on page...">
-  <button onclick="findText()">Find</button>
-  <button onclick="findNext()">Next</button>
-  <button onclick="findPrev()">Previous</button>
+<div class="find-container">
+  <input type="text" id="searchInput" placeholder="Find on page..." />
+
+  <button class="find-btn" onclick="searchText()">Find</button>
+  <button class="find-btn" onclick="nextMatch()">Next</button>
+  <button class="find-btn" onclick="prevMatch()">Previous</button>
 </div>
     </nav>
 
@@ -941,6 +942,7 @@
 </body>
 
 </html>
+
 
 
 

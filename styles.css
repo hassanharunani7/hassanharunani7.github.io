@@ -2811,6 +2811,19 @@ mark {
     cursor: pointer;
 }
 
+#searchMessage{
+  margin-top:6px;
+  font-size:14px;
+  font-weight:500;
+}
+
+.not-found{
+  color:#ff4d4d;
+}
+
+.found{
+  color:#4CAF50;
+}
 
 
 

@@ -1112,6 +1112,32 @@ window.addEventListener("scroll", () => {
     });
 });
 
+let matches = [];
+let currentIndex = -1;
+
+function findText() {
+  let word = document.getElementById("searchInput").value;
+  matches = [];
+  currentIndex = -1;
+
+  let elements = document.body.innerText;
+  
+  if (window.find) {
+    window.find(word);
+  }
+}
+
+function findNext() {
+  let word = document.getElementById("searchInput").value;
+  window.find(word);
+}
+
+function findPrev() {
+  let word = document.getElementById("searchInput").value;
+  window.find(word, false, true);
+}
+
+
 
 
 

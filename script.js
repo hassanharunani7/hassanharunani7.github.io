@@ -1112,69 +1112,69 @@ window.addEventListener("scroll", () => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
 
-let marks = [];
+document.addEventListener("DOMContentLoaded", () => {
+
+let results = [];
 let currentIndex = -1;
 
 const findBtn = document.getElementById("findBtn");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
+const input = document.getElementById("searchInput");
 
 findBtn.addEventListener("click", searchText);
 nextBtn.addEventListener("click", nextMatch);
 prevBtn.addEventListener("click", prevMatch);
 
-function clearHighlights(){
-document.querySelectorAll("mark").forEach(el=>{
-el.replaceWith(el.innerText);
-});
+function searchText(){
+
+let keyword = input.value.toLowerCase();
+results = [];
+
+document.querySelectorAll("p,h1,h2,h3,li,span").forEach(el => {
+
+if(el.innerText.toLowerCase().includes(keyword)){
+results.push(el);
 }
 
-function searchText(){
-clearHighlights();
+});
 
-let keyword = document.getElementById("searchInput").value;
+if(results.length > 0){
+currentIndex = 0;
+results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+}
 
-if(!keyword) return;
-
-let bodyHTML = document.body.innerHTML;
-
-let regex = new RegExp(keyword,"gi");
-
-document.body.innerHTML = bodyHTML.replace(regex, match => `<mark>${match}</mark>`);
-
-marks = document.querySelectorAll("mark");
-currentIndex = -1;
-
-nextMatch();
 }
 
 function nextMatch(){
-if(marks.length === 0) return;
+
+if(results.length === 0) return;
 
 currentIndex++;
 
-if(currentIndex >= marks.length){
+if(currentIndex >= results.length){
 currentIndex = 0;
 }
 
-marks[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
 }
 
 function prevMatch(){
-if(marks.length === 0) return;
+
+if(results.length === 0) return;
 
 currentIndex--;
 
 if(currentIndex < 0){
-currentIndex = marks.length - 1;
+currentIndex = results.length - 1;
 }
 
-marks[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
 }
 
 });
+
 
 
 

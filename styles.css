@@ -2750,6 +2750,34 @@ nav a.active::after {
 }
 
 
+.find-container{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+#searchInput{
+  padding:8px 12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  outline:none;
+  font-size:14px;
+}
+
+.find-btn{
+  padding:8px 14px;
+  border-radius:20px;
+  border:none;
+  background:#1da1f2;
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.find-btn:hover{
+  background:#0d8ae6;
+}
 
 
 

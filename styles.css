@@ -2786,6 +2786,31 @@ mark {
   border-radius: 3px;
 }
 
+.top-tools{
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+}
+
+.top-tools input{
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+}
+
+.top-tools button{
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    background: #1aa3ff;
+    color: white;
+    cursor: pointer;
+}
+
 
 
 

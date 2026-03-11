@@ -1113,9 +1113,7 @@ window.addEventListener("scroll", () => {
 });
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
-let results = [];
+let marks = [];
 let currentIndex = -1;
 
 const findBtn = document.getElementById("findBtn");
@@ -1127,53 +1125,56 @@ findBtn.addEventListener("click", searchText);
 nextBtn.addEventListener("click", nextMatch);
 prevBtn.addEventListener("click", prevMatch);
 
-function searchText(){
-
-let keyword = input.value.toLowerCase();
-results = [];
-
-document.querySelectorAll("p,h1,h2,h3,li,span").forEach(el => {
-
-if(el.innerText.toLowerCase().includes(keyword)){
-results.push(el);
+function clearHighlights() {
+  document.querySelectorAll("mark").forEach(el => {
+    el.replaceWith(el.textContent);
+  });
 }
 
-});
+function searchText() {
 
-if(results.length > 0){
-currentIndex = 0;
-results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+  clearHighlights();
+
+  const keyword = input.value.trim();
+  if (!keyword) return;
+
+  const regex = new RegExp(keyword, "gi");
+
+  document.querySelectorAll("p,h1,h2,h3,h4,li,span").forEach(el => {
+    el.innerHTML = el.innerHTML.replace(regex, match => `<mark>${match}</mark>`);
+  });
+
+  marks = document.querySelectorAll("mark");
+  currentIndex = -1;
+
+  nextMatch();
 }
 
+function nextMatch() {
+
+  if (marks.length === 0) return;
+
+  currentIndex++;
+  if (currentIndex >= marks.length) currentIndex = 0;
+
+  marks[currentIndex].scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
 
-function nextMatch(){
+function prevMatch() {
 
-if(results.length === 0) return;
+  if (marks.length === 0) return;
 
-currentIndex++;
+  currentIndex--;
+  if (currentIndex < 0) currentIndex = marks.length - 1;
 
-if(currentIndex >= results.length){
-currentIndex = 0;
+  marks[currentIndex].scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
-
-results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
-}
-
-function prevMatch(){
-
-if(results.length === 0) return;
-
-currentIndex--;
-
-if(currentIndex < 0){
-currentIndex = results.length - 1;
-}
-
-results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
-}
-
-});
 
 
 

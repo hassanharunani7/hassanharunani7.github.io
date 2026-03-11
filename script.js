@@ -1112,41 +1112,70 @@ window.addEventListener("scroll", () => {
     });
 });
 
-let results = [];
+document.addEventListener("DOMContentLoaded", function () {
+
+let marks = [];
 let currentIndex = -1;
 
+const findBtn = document.getElementById("findBtn");
+const nextBtn = document.getElementById("nextBtn");
+const prevBtn = document.getElementById("prevBtn");
+
+findBtn.addEventListener("click", searchText);
+nextBtn.addEventListener("click", nextMatch);
+prevBtn.addEventListener("click", prevMatch);
+
+function clearHighlights(){
+document.querySelectorAll("mark").forEach(el=>{
+el.replaceWith(el.innerText);
+});
+}
+
 function searchText(){
-  let text = document.getElementById("searchInput").value.toLowerCase();
-  results = [];
-  currentIndex = -1;
+clearHighlights();
 
-  let elements = document.querySelectorAll("p, h1, h2, h3, li, span");
+let keyword = document.getElementById("searchInput").value;
 
-  elements.forEach(el => {
-    if(el.innerText.toLowerCase().includes(text)){
-      results.push(el);
-    }
-  });
+if(!keyword) return;
 
-  if(results.length > 0){
-    currentIndex = 0;
-    results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
-  }
+let bodyHTML = document.body.innerHTML;
+
+let regex = new RegExp(keyword,"gi");
+
+document.body.innerHTML = bodyHTML.replace(regex, match => `<mark>${match}</mark>`);
+
+marks = document.querySelectorAll("mark");
+currentIndex = -1;
+
+nextMatch();
 }
 
 function nextMatch(){
-  if(results.length === 0) return;
+if(marks.length === 0) return;
 
-  currentIndex = (currentIndex + 1) % results.length;
-  results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+currentIndex++;
+
+if(currentIndex >= marks.length){
+currentIndex = 0;
+}
+
+marks[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
 }
 
 function prevMatch(){
-  if(results.length === 0) return;
+if(marks.length === 0) return;
 
-  currentIndex = (currentIndex - 1 + results.length) % results.length;
-  results[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+currentIndex--;
+
+if(currentIndex < 0){
+currentIndex = marks.length - 1;
 }
+
+marks[currentIndex].scrollIntoView({behavior:"smooth", block:"center"});
+}
+
+});
+
 
 
 

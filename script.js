@@ -1112,69 +1112,41 @@ window.addEventListener("scroll", () => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
 
-let marks = [];
-let currentIndex = -1;
-
+const input = document.getElementById("searchInput");
 const findBtn = document.getElementById("findBtn");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
-const input = document.getElementById("searchInput");
 
-findBtn.addEventListener("click", searchText);
-nextBtn.addEventListener("click", nextMatch);
-prevBtn.addEventListener("click", prevMatch);
+findBtn.addEventListener("click", () => {
+    const word = input.value;
+    if (!word) return;
 
-function clearHighlights() {
-  document.querySelectorAll("mark").forEach(el => {
-    el.replaceWith(el.textContent);
-  });
-}
+    window.find(word);
+});
 
-function searchText() {
+nextBtn.addEventListener("click", () => {
+    const word = input.value;
+    if (!word) return;
 
-  clearHighlights();
+    window.find(word, false, false, true, false, false, false);
+});
 
-  const keyword = input.value.trim();
-  if (!keyword) return;
+prevBtn.addEventListener("click", () => {
+    const word = input.value;
+    if (!word) return;
 
-  const regex = new RegExp(keyword, "gi");
+    window.find(word, false, true, true, false, false, false);
+});
 
-  document.querySelectorAll("p,h1,h2,h3,h4,li,span").forEach(el => {
-    el.innerHTML = el.innerHTML.replace(regex, match => `<mark>${match}</mark>`);
-  });
+});
 
-  marks = document.querySelectorAll("mark");
-  currentIndex = -1;
-
-  nextMatch();
-}
-
-function nextMatch() {
-
-  if (marks.length === 0) return;
-
-  currentIndex++;
-  if (currentIndex >= marks.length) currentIndex = 0;
-
-  marks[currentIndex].scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-}
-
-function prevMatch() {
-
-  if (marks.length === 0) return;
-
-  currentIndex--;
-  if (currentIndex < 0) currentIndex = marks.length - 1;
-
-  marks[currentIndex].scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-}
+input.addEventListener("keypress", function(e){
+    if(e.key === "Enter"){
+        window.find(input.value);
+    }
+});
 
 
 

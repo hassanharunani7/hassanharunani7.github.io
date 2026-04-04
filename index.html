@@ -25,18 +25,17 @@
 <body>
 	<div id="progress-bar"></div>
     <!-- Sticky Navigation Buttons (Top Right) -->
-	
-<div class="sticky-nav">
-    <a href="#home" class="sticky-btn" title="Home"><i class="fas fa-home"></i></a>
-    <a href="#about" class="sticky-btn" title="About"><i class="fas fa-user"></i></a>
-    <a href="#achievements" class="sticky-btn" title="Achievements"><i class="fas fa-trophy"></i></a>
-    <a href="#swimming" class="sticky-btn" title="Swimming Journey"><i class="fas fa-swimmer"></i></a>
-    <a href="#education" class="sticky-btn" title="Education"><i class="fas fa-graduation-cap"></i></a>
-    <a href="#activities" class="sticky-btn" title="Activities"><i class="fas fa-star"></i></a>
-    <a href="#interests" class="sticky-btn" title="Interests"><i class="fas fa-heart"></i></a>
-    <a href="#gallery" class="sticky-btn" title="Gallery"><i class="fas fa-image"></i></a>
-    <a href="#contact" class="sticky-btn" title="Contact"><i class="fas fa-envelope"></i></a>
-</div>
+    <div class="sticky-nav">
+        <a href="#home" class="sticky-btn" title="Home"><i class="fas fa-home"></i></a>
+        <a href="#about" class="sticky-btn" title="About"><i class="fas fa-user"></i></a>
+        <a href="#achievements" class="sticky-btn" title="Achievements"><i class="fas fa-trophy"></i></a>
+		<a href="#swimming" class="sticky-btn" title="Swimming Journey"><i class="fas fa-swimmer"></i></a>
+        <a href="#education" class="sticky-btn" title="Education"><i class="fas fa-graduation-cap"></i></a>
+        <a href="#interests" class="sticky-btn" title="Interests"><i class="fas fa-heart"></i></a>
+		<a href="#gallery" class="sticky-btn" title="Gallery"><i class="fas fa-image"></i></a>
+        <a href="#contact" class="sticky-btn" title="Contact"><i class="fas fa-envelope"></i></a>
+    </div>
+
     <!-- Navigation Bar -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -49,7 +48,6 @@
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
 				<li><a href="#swimming" class="nav-link">Swimming</a></li>
                 <li><a href="#education" class="nav-link">Education</a></li>
-				<li><a href="#activities" class="nav-link">Activities</a></li>
                 <li><a href="#interest" class="nav-link">Interests</a></li>
 				<li><a href="#gallery" class="nav-link">Gallery</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -544,9 +542,14 @@
                     <div class="edu-timeline-content">
                         <h4>🌍 University - USA Affiliated</h4>
                         <p>
-                            Planning to pursue a degree in <strong>Forensic Science</strong> at USA-affiliated universities
-
+                            Planning to pursue a degree in <strong>Forensic Science</strong> at USA-affiliated universities, 
+                            preferably with campuses in:
                         </p>
+                        <ul class="university-list">
+                            <li>Dubai 🇦🇪</li>
+                            <li>Nairobi 🇰🇪</li>
+                            <li>Qatar 🇶🇦</li>
+                        </ul>
                     </div>
                 </div>
 
@@ -629,66 +632,7 @@
             </div>
         </div>
     </section>
-<!-- Activities Section -->
-<section id="activities" class="activities-section">
-    <div class="container">
-        <h2 class="section-title">Extracurricular Activities</h2>
-        <p class="section-subtitle">Leadership, Diplomacy & Community Service</p>
-        
-        <div class="activities-grid">
-            <!-- MUN Card -->
-            <div class="activity-card">
-                <div class="activity-icon">🎤</div>
-                <h3>Model United Nations (MUN)</h3>
-                <p class="activity-timeline"><strong>Since:</strong> Grade 7 (August 2022)</p>
-                
-                <h4>Leadership Roles</h4>
-                <ul>
-                    <li>✅ Chaired 3 Conferences</li>
-                    <li>✅ Participated as Delegate in 4-5 Conferences</li>
-                    <li>📍 MS MUN, DARMUN, AKMUN</li>
-                </ul>
-                
-                <h4>Skills Developed</h4>
-                <ul>
-                    <li>Public Speaking & Presentation</li>
-                    <li>Diplomatic Negotiation</li>
-                    <li>Research & Critical Thinking</li>
-                    <li>Leadership & Collaboration</li>
-                </ul>
-                
-                <h4>Community Impact</h4>
-                <p>Enhanced peers' understanding of global issues and international diplomacy. Mentored younger delegates and promoted civic engagement.</p>
-            </div>
-            
-            <!-- LEOs Card -->
-            <div class="activity-card">
-                <div class="activity-icon">❤️</div>
-                <h3>LEOs Club (Alpha Club Mzizima)</h3>
-                <p class="activity-timeline"><strong>Since:</strong> Grade 9 (August 2024)</p>
-                
-                <h4>Involvement & Activities</h4>
-                <ul>
-                    <li>🌟 Active Club Member</li>
-                    <li>🤝 Community Service Projects</li>
-                    <li>👥 Youth Leadership Development</li>
-                    <li>🌍 Social Responsibility Initiatives</li>
-                </ul>
-                
-                <h4>Skills Gained</h4>
-                <ul>
-                    <li>Service to Community</li>
-                    <li>Leadership Development</li>
-                    <li>Project Management</li>
-                    <li>Teamwork & Collaboration</li>
-                </ul>
-                
-                <h4>Community Impact</h4>
-                <p>Contributing to meaningful social change through community service. Fostered sense of responsibility among youth and positively impacted local causes.</p>
-            </div>
-        </div>
-    </div>
-</section>
+
     <!-- Interests & Career Section -->
     <section id="interests" class="interests">
         <div class="container">
@@ -812,90 +756,76 @@
         </div>
 	</div>
 	
-  <!-- Gallery Section -->
-<section id="gallery" class="gallery">
-    <div class="container">
-        <h2 class="section-title">Gallery</h2>
+    <!-- Gallery Section -->
+	<section id="gallery" class="gallery">
+  <div class="container">
+    <h2 class="section-title">Gallery</h2>
 
-        <div class="image-grid">
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./bluefins.png" alt="BlueFins Swim Club Logo">
-                <caption>Bluefins Swim Club Logo</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./bluefinsteam.png" alt="BlueFins Team 2024">
-                <caption>Bluefins Team 2024</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./team.png" alt="Bluefins Team 2025">
-                <caption>Bluefins Team 2025</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./bluefinsteamnow.jpg" alt="Part Of The Bluefins Team At The Taliss IST Invitational 2026">
-                <caption>Part Of The Bluefins Team At The Taliss IST Invitational 2026</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./smallme.png" alt="Winning One of My First Medals">
-                <caption>Winning One Of My First Medals</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./fk.png" alt="Medal in FK Championships 2024">
-                <caption>Medal in FK Championships 2024</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./talissmedal.png" alt="Medal in Taliss IST Invitational 2025">
-                <caption>Medal in Taliss IST Invitational 2025</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./galabesties.jpg" alt="Best Friends In Galas">
-                <caption>Best Friends In Galas</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./warmup.jpg" alt="During Warmup At The Taliss IST Invitational 2026">
-                <caption>During Warmup At The Taliss IST Invitational 2026</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./breast.jpg" alt="Breaststroke In Action - 2026">
-                <caption>Breaststroke In Action - 2026</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./turning.jpg" alt="Turning In Action - 2026">
-                <caption>Turning In Action - 2026</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./finishrace.jpg" alt="End Of Race">
-                <caption>End Of Race</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./individualmedal.jpg" alt="Individual Medal - Taliss IST Invitational 2026">
-                <caption>Individual Medal - Taliss IST Invitational 2026</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./silvermedal.jpg" alt="Winning A Medal In Taliss IST Invitational 2026">
-                <caption>Winning A Medal In Taliss IST Invitational 2026</caption>
-            </div>
-            
-            <div class="image-card" onclick="showImage(this)">
-                <img src="./talissmedals.jpg" alt="All Medals In The Taliss IST Invitational 2026">
-                <caption>All Medals In The Taliss IST Invitational 2026</caption>
-            </div>
+    <div class="image-grid">
+		
+		<div class="image-card" onclick="toggleImage(this)">
+      		<img src="./bluefins.png" alt="BlueFins Swim Club Logo"><center><caption>Bluefins Swim Club Logo</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+      		<img src="./bluefinsteam.png" alt="BlueFins Team 2024"><center><caption>Bluefins Team 2024</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+      		<img src="./team.png" alt="Bluefins Team 2025"><center><caption>Bluefins Team 2025</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./bluefinsteamnow.jpg" alt="Part Of The Bluefins Team At The Taliss IST Invitational 2026"><center><caption>Part Of The Bluefins Team At The Taliss IST Invitational 2026</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+     		<img src="./smallme.png" alt="Winning One of My First Medals"><center><caption>Winning One Of My First Medals</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+      		<img src="./fk.png" alt="Medal in FK Championships 2024"><center><caption>Medal in FK Championships 2024</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+      		<img src="./talissmedal.png" alt="Medal in Taliss IST Invitational 2025"><center><caption>Medal in Taliss IST Invitational 2025</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./galabesties.jpg" alt="Best Friends In Galas"><center><caption>Best Friends In Galas</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./warmup.jpg" alt="During Warmup At The Taliss IST Invitational 2026"><cnter><caption>During Warmup At The Taliss IST Invitational 2026</caption></cnter>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./breast.jpg" alt="Breaststroke In Action - 2026"><center><caption>Breastroke In Action - 2026</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./turning.jpg" alt="Turning In Action - 2026"><center><caption>Turning In Action - 2026</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./finishrace.jpg" alt="End Of Race"><center><caption>End Of Race</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="individualmedal.jpg" alt="Individual Medal - Taliss IST Invitational 2026"><center><caption>Individual Medal - Taliss IST Invitational 2026</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./silvermedal.jpg" alt="Winning A Medal In Taliss IST Invitational 2026"><center><caption>Winning A Medal In Taliss IST Invitational 2026</caption></center>
+		</div>
+		
+		<div class="image-card" onclick="toggleImage(this)">
+			<img src="./talissmedals.jpg" alt="All Medals In The Taliss IST Invitational 2026"><center><caption>All Medals In The Taliss IST Invitational 2026</caption></center>
+		</div>
+    
+	</div>
 
-        </div>
-    </div>
+  </div>
 </section>
 
     <!-- Contact Section -->
@@ -1014,7 +944,6 @@
 </body>
 
 </html>
-
 
 
 

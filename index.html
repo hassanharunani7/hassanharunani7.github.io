@@ -812,76 +812,90 @@
         </div>
 	</div>
 	
-    <!-- Gallery Section -->
-	<section id="gallery" class="gallery">
-  <div class="container">
-    <h2 class="section-title">Gallery</h2>
+  <!-- Gallery Section -->
+<section id="gallery" class="gallery">
+    <div class="container">
+        <h2 class="section-title">Gallery</h2>
 
-    <div class="image-grid">
-		
-		<div class="image-card" onclick="toggleImage(this)">
-      		<img src="./bluefins.png" alt="BlueFins Swim Club Logo"><center><caption>Bluefins Swim Club Logo</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-      		<img src="./bluefinsteam.png" alt="BlueFins Team 2024"><center><caption>Bluefins Team 2024</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-      		<img src="./team.png" alt="Bluefins Team 2025"><center><caption>Bluefins Team 2025</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./bluefinsteamnow.jpg" alt="Part Of The Bluefins Team At The Taliss IST Invitational 2026"><center><caption>Part Of The Bluefins Team At The Taliss IST Invitational 2026</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-     		<img src="./smallme.png" alt="Winning One of My First Medals"><center><caption>Winning One Of My First Medals</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-      		<img src="./fk.png" alt="Medal in FK Championships 2024"><center><caption>Medal in FK Championships 2024</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-      		<img src="./talissmedal.png" alt="Medal in Taliss IST Invitational 2025"><center><caption>Medal in Taliss IST Invitational 2025</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./galabesties.jpg" alt="Best Friends In Galas"><center><caption>Best Friends In Galas</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./warmup.jpg" alt="During Warmup At The Taliss IST Invitational 2026"><cnter><caption>During Warmup At The Taliss IST Invitational 2026</caption></cnter>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./breast.jpg" alt="Breaststroke In Action - 2026"><center><caption>Breastroke In Action - 2026</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./turning.jpg" alt="Turning In Action - 2026"><center><caption>Turning In Action - 2026</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./finishrace.jpg" alt="End Of Race"><center><caption>End Of Race</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="individualmedal.jpg" alt="Individual Medal - Taliss IST Invitational 2026"><center><caption>Individual Medal - Taliss IST Invitational 2026</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./silvermedal.jpg" alt="Winning A Medal In Taliss IST Invitational 2026"><center><caption>Winning A Medal In Taliss IST Invitational 2026</caption></center>
-		</div>
-		
-		<div class="image-card" onclick="toggleImage(this)">
-			<img src="./talissmedals.jpg" alt="All Medals In The Taliss IST Invitational 2026"><center><caption>All Medals In The Taliss IST Invitational 2026</caption></center>
-		</div>
-    
-	</div>
+        <div class="image-grid">
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./bluefins.png" alt="BlueFins Swim Club Logo">
+                <caption>Bluefins Swim Club Logo</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./bluefinsteam.png" alt="BlueFins Team 2024">
+                <caption>Bluefins Team 2024</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./team.png" alt="Bluefins Team 2025">
+                <caption>Bluefins Team 2025</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./bluefinsteamnow.jpg" alt="Part Of The Bluefins Team At The Taliss IST Invitational 2026">
+                <caption>Part Of The Bluefins Team At The Taliss IST Invitational 2026</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./smallme.png" alt="Winning One of My First Medals">
+                <caption>Winning One Of My First Medals</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./fk.png" alt="Medal in FK Championships 2024">
+                <caption>Medal in FK Championships 2024</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./talissmedal.png" alt="Medal in Taliss IST Invitational 2025">
+                <caption>Medal in Taliss IST Invitational 2025</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./galabesties.jpg" alt="Best Friends In Galas">
+                <caption>Best Friends In Galas</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./warmup.jpg" alt="During Warmup At The Taliss IST Invitational 2026">
+                <caption>During Warmup At The Taliss IST Invitational 2026</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./breast.jpg" alt="Breaststroke In Action - 2026">
+                <caption>Breaststroke In Action - 2026</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./turning.jpg" alt="Turning In Action - 2026">
+                <caption>Turning In Action - 2026</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./finishrace.jpg" alt="End Of Race">
+                <caption>End Of Race</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./individualmedal.jpg" alt="Individual Medal - Taliss IST Invitational 2026">
+                <caption>Individual Medal - Taliss IST Invitational 2026</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./silvermedal.jpg" alt="Winning A Medal In Taliss IST Invitational 2026">
+                <caption>Winning A Medal In Taliss IST Invitational 2026</caption>
+            </div>
+            
+            <div class="image-card" onclick="showImage(this)">
+                <img src="./talissmedals.jpg" alt="All Medals In The Taliss IST Invitational 2026">
+                <caption>All Medals In The Taliss IST Invitational 2026</caption>
+            </div>
 
-  </div>
+        </div>
+    </div>
 </section>
 
     <!-- Contact Section -->

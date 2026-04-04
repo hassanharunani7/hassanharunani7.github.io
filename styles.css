@@ -1957,3 +1957,1007 @@ section::before {
 .activity-card::before {
     content: '';
     position: absolute
+
+
+/* ============================================
+   RESPONSIVE DESIGN - TABLETS (768px and below)
+   ============================================ */
+
+@media (max-width: 768px) {
+    :root {
+        --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        --shadow-lg: 0 5px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    body {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .container {
+        padding: 0 15px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    section::before {
+        display: none;
+    }
+
+    /* ============================================
+       NAVIGATION - MOBILE
+       ============================================ */
+
+    .navbar .container {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        gap: 8px;
+    }
+
+    .logo i {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+        width: 100%;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hamburger {
+        display: flex;
+        order: 2;
+    }
+
+    #theme-toggle,
+    #searchInput,
+    .find-btn {
+        display: none;
+    }
+
+    /* ============================================
+       HERO SECTION - MOBILE
+       ============================================ */
+
+    .hero {
+        min-height: 100vh;
+        padding: 100px 15px 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+
+    .hero .subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .hero .description {
+        font-size: 0.95rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       SECTIONS - MOBILE
+       ============================================ */
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .section-title::after {
+        width: 70px;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    /* ============================================
+       ABOUT SECTION - MOBILE
+       ============================================ */
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about-text p {
+        font-size: 0.95rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .stat-card h4 {
+        font-size: 1.8rem;
+    }
+
+    .stat-card p {
+        font-size: 0.85rem;
+    }
+
+    .info-card {
+        padding: 20px;
+        margin-bottom: 15px;
+    }
+
+    .info-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+    }
+
+    .info-card ul {
+        font-size: 0.9rem;
+    }
+
+    .info-card li {
+        padding: 8px 0;
+    }
+
+    /* ============================================
+       ACHIEVEMENTS SECTION - MOBILE
+       ============================================ */
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .achievement-card {
+        padding: 25px 20px;
+    }
+
+    .achievement-icon {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .achievement-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .achievement-card p {
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       SWIMMING JOURNEY - MOBILE
+       ============================================ */
+
+    .swimming-timeline::before {
+        left: 20px;
+    }
+
+    .swim-timeline-item {
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .swim-year {
+        width: 90px;
+        height: 90px;
+        font-size: 0.9rem;
+        box-shadow: 0 0 0 3px var(--light-bg), 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .swim-content {
+        padding: 20px;
+    }
+
+    .swim-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .swim-content p {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+
+    .achievement-list li {
+        padding: 6px 0;
+        padding-left: 20px;
+        font-size: 0.9rem;
+    }
+
+    .swimming-stats {
+        padding: 30px 20px;
+    }
+
+    .swimming-stats h3 {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+
+    .training-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .training-card {
+        padding: 20px 15px;
+    }
+
+    .training-card i {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .training-card h4 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .training-card p {
+        font-size: 0.85rem;
+    }
+
+    /* ============================================
+       PERSONAL BESTS TABLE - MOBILE
+       ============================================ */
+
+    .personal-bests-section {
+        padding: 30px 0;
+        margin-top: 30px;
+    }
+
+    .personal-bests-section h3 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    .table-wrapper {
+        margin: 20px 0;
+        border-radius: 10px;
+        overflow-x: auto;
+    }
+
+    .personal-bests-table {
+        font-size: 0.75rem;
+        min-width: 500px;
+    }
+
+    .personal-bests-table th,
+    .personal-bests-table td {
+        padding: 8px 10px;
+    }
+
+    .personal-bests-table th {
+        font-size: 0.8rem;
+    }
+
+    .event-name {
+        font-size: 0.85rem;
+    }
+
+    .time-cell {
+        font-size: 0.95rem;
+        padding: 8px 10px;
+    }
+
+    .date-cell {
+        font-size: 0.8rem;
+    }
+
+    .not-my-stroke {
+        display: block;
+        margin: 3px 0 0 0;
+        padding: 2px 5px;
+        font-size: 0.7rem;
+    }
+
+    .training-note {
+        padding: 10px 10px !important;
+        font-size: 0.75rem;
+    }
+
+    .pb-stats {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-top: 25px;
+    }
+
+    .pb-stat-card {
+        padding: 20px;
+    }
+
+    .pb-stat-card i {
+        font-size: 2rem;
+    }
+
+    .pb-stat-card h4 {
+        font-size: 1.1rem;
+    }
+
+    /* ============================================
+       EDUCATION SECTION - MOBILE
+       ============================================ */
+
+    .education-timeline::before {
+        left: 20px;
+    }
+
+    .edu-timeline-item {
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .edu-marker {
+        width: 90px;
+        height: 90px;
+        font-size: 0.85rem;
+        box-shadow: 0 0 0 3px var(--light-bg), 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .edu-timeline-content {
+        padding: 20px;
+    }
+
+    .edu-timeline-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .edu-timeline-content p {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .subjects-section {
+        padding: 25px 15px;
+        margin-top: 30px;
+    }
+
+    .subjects-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 8px;
+    }
+
+    .subjects-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .subject-card {
+        padding: 15px;
+    }
+
+    .subject-code {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+
+    .subject-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .level {
+        font-size: 0.8rem;
+    }
+
+    .click-hint {
+        font-size: 0.75rem;
+    }
+
+    .education-info {
+        padding: 20px;
+        margin-top: 25px;
+    }
+
+    .school-card {
+        padding: 20px;
+    }
+
+    .education-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-info p {
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       ACTIVITIES SECTION - MOBILE
+       ============================================ */
+
+    .activities-section {
+        padding: 60px 15px;
+    }
+
+    .activities-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .activity-card {
+        padding: 25px;
+    }
+
+    .activity-icon {
+        font-size: 2.5rem;
+    }
+
+    .activity-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .activity-timeline {
+        font-size: 0.9rem;
+    }
+
+    .activity-card h4 {
+        font-size: 1.05rem;
+        margin-top: 15px;
+    }
+
+    .activity-card ul,
+    .activity-card li {
+        font-size: 0.9rem;
+    }
+
+    .activity-card p {
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       INTERESTS SECTION - MOBILE
+       ============================================ */
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .interest-card {
+        padding: 25px;
+    }
+
+    .card-icon {
+        font-size: 2rem;
+    }
+
+    .interest-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .interest-card p {
+        font-size: 0.9rem;
+    }
+
+    .skills {
+        gap: 5px;
+    }
+
+    .skill-tag {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+    }
+
+    .click-interest-hint {
+        font-size: 0.8rem;
+    }
+
+    .career-path {
+        padding: 30px 20px;
+        margin-top: 40px;
+    }
+
+    .career-path h3 {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .career-timeline {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .career-step {
+        padding: 20px;
+    }
+
+    .career-step h4 {
+        font-size: 1rem;
+    }
+
+    .career-step p {
+        font-size: 0.85rem;
+    }
+
+    /* ============================================
+       GALLERY - MOBILE
+       ============================================ */
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 25px;
+    }
+
+    .image-card {
+        border-radius: 10px;
+    }
+
+    .image-card:hover {
+        transform: scale(1.02);
+    }
+
+    caption {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    /* ============================================
+       CONTACT SECTION - MOBILE
+       ============================================ */
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .contact-card i {
+        font-size: 2rem;
+    }
+
+    .contact-card h4 {
+        font-size: 0.95rem;
+    }
+
+    .contact-card p {
+        font-size: 0.85rem;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       MODALS - MOBILE
+       ============================================ */
+
+    .modal-content {
+        width: 95%;
+        max-height: 90vh;
+        border-radius: 15px;
+    }
+
+    .modal-body {
+        padding: 25px 20px;
+    }
+
+    .close-btn {
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
+    }
+
+    .interest-modal-header {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .interest-modal-icon {
+        font-size: 2.5rem;
+    }
+
+    .interest-modal-header h2 {
+        font-size: 1.3rem;
+    }
+
+    .interest-modal-content h3,
+    .syllabus-content h3 {
+        font-size: 1.15rem;
+        margin-top: 15px;
+    }
+
+    .interest-modal-content h4,
+    .syllabus-content h4 {
+        font-size: 1rem;
+        margin-top: 12px;
+    }
+
+    .interest-modal-content ul,
+    .syllabus-content ul {
+        margin-left: 10px;
+    }
+
+    .interest-modal-content li,
+    .syllabus-content li {
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+
+    .achievement-highlight,
+    .interest-highlight {
+        padding: 12px;
+        border-left-width: 3px;
+        margin: 10px 0;
+    }
+
+    .code-display {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    /* ============================================
+       LIGHTBOX - MOBILE
+       ============================================ */
+
+    .lightbox {
+        padding: 10px;
+    }
+
+    .lightbox-img {
+        max-height: 85vh;
+        border-radius: 12px;
+    }
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    .lightbox-close {
+        top: 10px;
+        right: 10px;
+    }
+
+    .lightbox-prev {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
+    }
+
+    /* ============================================
+       SOCIAL LINKS - MOBILE
+       ============================================ */
+
+    .social-icons {
+        gap: 15px !important;
+    }
+
+    .social-icons a {
+        font-size: 1.8rem;
+    }
+
+    /* ============================================
+       FOOTER - MOBILE
+       ============================================ */
+
+    .footer {
+        padding: 30px 15px;
+    }
+
+    .footer p {
+        font-size: 0.85rem;
+        margin-bottom: 10px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - SMALL PHONES (480px and below)
+   ============================================ */
+
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    /* ============================================
+       NAVIGATION - SMALL PHONES
+       ============================================ */
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo i {
+        font-size: 1.2rem;
+    }
+
+    /* ============================================
+       HERO - SMALL PHONES
+       ============================================ */
+
+    .hero {
+        min-height: 100vh;
+        padding: 80px 10px 30px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .hero .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero .description {
+        font-size: 0.85rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    /* ============================================
+       SECTIONS - SMALL PHONES
+       ============================================ */
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    /* ============================================
+       ABOUT - SMALL PHONES
+       ============================================ */
+
+    .about-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .stat-card h4 {
+        font-size: 1.5rem;
+    }
+
+    /* ============================================
+       ACHIEVEMENTS - SMALL PHONES
+       ============================================ */
+
+    .achievement-icon {
+        font-size: 2rem;
+    }
+
+    .achievement-card h3 {
+        font-size: 1rem;
+    }
+
+    /* ============================================
+       SWIMMING - SMALL PHONES
+       ============================================ */
+
+    .swim-year {
+        width: 75px;
+        height: 75px;
+        font-size: 0.75rem;
+    }
+
+    .swim-content h4 {
+        font-size: 1rem;
+    }
+
+    .training-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* ============================================
+       EDUCATION - SMALL PHONES
+       ============================================ */
+
+    .edu-marker {
+        width: 75px;
+        height: 75px;
+        font-size: 0.75rem;
+    }
+
+    .subjects-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .subject-card {
+        padding: 12px;
+    }
+
+    .subject-code {
+        font-size: 0.65rem;
+        padding: 4px 8px;
+    }
+
+    .subject-card h4 {
+        font-size: 0.9rem;
+    }
+
+    /* ============================================
+       CONTACT - SMALL PHONES
+       ============================================ */
+
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* ============================================
+       IMAGE GRID - SMALL PHONES
+       ============================================ */
+
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    /* ============================================
+       MODALS - SMALL PHONES
+       ============================================ */
+
+    .modal-body {
+        padding: 20px 15px;
+    }
+
+    .interest-modal-header {
+        margin-bottom: 15px;
+    }
+
+    .interest-modal-icon {
+        font-size: 2rem;
+    }
+
+    /* ============================================
+       LIGHTBOX - SMALL PHONES
+       ============================================ */
+
+    .lightbox-close,
+    .lightbox-prev,
+    .lightbox-next {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+
+    /* ============================================
+       STICKY NAV - HIDDEN ON SMALL PHONES
+       ============================================ */
+
+    .sticky-nav {
+        display: none;
+    }
+}
+
+/* ============================================
+   EXTRA SMALL DEVICES (360px and below)
+   ============================================ */
+
+@media (max-width: 360px) {
+    body {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 30px 8px;
+    }
+
+    .hero h1 {
+        font-size: 1.4rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+
+    .btn {
+        padding: 8px 12px;
+        font-size: 0.8rem;
+    }
+
+    .stat-card h4 {
+        font-size: 1.3rem;
+    }
+
+    .image-grid {
+        gap: 6px;
+    }
+
+    .modal-content {
+        width: 98%;
+    }
+}

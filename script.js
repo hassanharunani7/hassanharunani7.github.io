@@ -1173,24 +1173,6 @@ findBtn.addEventListener("click", () => {
 });
 
 
-// ==========================================
-// GALLERY LIGHTBOX WITH CAPTIONS
-// ==========================================
-
-function showImage(cardElement) {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const caption = document.getElementById('lightbox-caption');
-    const img = cardElement.querySelector('img');
-    const imgCaption = cardElement.querySelector('caption');
-    
-    lightboxImg.src = img.src;
-    lightboxImg.alt = img.alt;
-    caption.textContent = imgCaption ? imgCaption.textContent : img.alt;
-    
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-}
 
 
 
